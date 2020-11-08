@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Plant Page</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+	<header id='page-header'>
+		<h1 id='page-title'>Plants in My House</h1>
+		<button id='show-navbar' class='mobile-only' type='button' onclick='toggleShow(document.getElementById("page-navbar"))'>HB</button>
+		
+		<nav id='page-navbar' class='mobile-invisible'>
+			<ul id='navbar-links'>
+				<li id='plants-navbar-link' class='navbar-link selected' onclick='mainNavClick(this)'>Plants</li>
+				<li id='contact-navbar-link' class='navbar-link' onclick='mainNavClick(this)'>Contact</li>
+				<li id='about-navbar-link' class='navbar-link' onclick='mainNavClick(this)'>About</li>
+			</ul>
+		</nav>
+	</header>
+
+	<section id='plants-section' class='page-body selected'>
+		<ul id='plant-list'>
+			<li class='plant-container active'>
+				<h2 class='plant-title'>Tradescantia Zebrina</h2>
+				
+				<div class='content-alignment-container'>		
+					<div class='plant-image-container'>
+						<img src="imgs/tradescantiaZebrina.png" class='plant-image' alt='plant-not-found'>
+					</div>
+					
+					<div class='plant-description-container'>
+						<nav class='description-selection-nav'>
+							<ul class='description-selection-list'>
+								<li class='description-selection'>
+									<span class='description-selection-title selected' onclick='showSection(this, ".description-section")'>Description</span>
+								</li>
+								<li class='description-selection'>
+									<span class='description-selection-title' onclick='showSection(this, ".care-section")'>Care</span>
+								</li>
+								<li class='description-selection'>
+									<span class='description-selection-title' onclick='showSection(this, ".origin-section")'>Origin</span>
+								</li>
+							</ul>
+						</nav>
+
+						<section class="description-section selection-section selected">
+							<p class='description-selection-contents'>Tradescantia zebrina has attractive zebra-patterned leaves, the upper surface showing purple new growth and green older growth parallel to the central axis, as well as two broad silver-colored stripes on the outer edges, with the lower leaf surface presenting a deep uniform magenta. The leaves are bluish green and usually have two longitudinal stripes that are silvery on the surface and purple on the underside. The leaf sheaths are thin and translucent, 8 to 12 mm long and 5 to 8 mm wide, at the mouth they are long, otherwise glabrous or slightly hairy.
+							</p>
+						</section>
+						<section class="care-section selection-section">
+							<p class='description-selection-contents'>It is commonly available and used as a houseplant and groundcover, aggressively colonizing new areas when left undisturbed. Propagated by cuttings, this plant can be moved or manipulated easily as its runners cling lightly to the ground (if used as cover). It tends to become an invasive species if not properly maintained. The plant is not frost-resistant but can be kept indoors during the winter months in colder climates.</p>
+						</section>
+						<section class= "origin-section selection-section">
+							<p class='description-selection-contents'>Tradescantia zebrina is native to Mexico, Central America and Colombia, but can also be found from Belize to El Salvador and Panama, as well as on the Caribbean islands. It is naturalized in parts of Asia, Africa, Australia, South America, and various oceanic islands.</p>
+						</section>
+					</div>
+					
+				</div>
+			</li>
+			<li class='plant-container'>
+				<h2 class='plant-title'>Hedera Helix</h2>
+				
+				<div class='content-alignment-container'>		
+					<div class='plant-image-container'>
+						<img src="imgs/commonIvy.png" class='plant-image' alt='plant-not-found'>
+					</div>
+					
+					<div class='plant-description-container'>
+						<nav class='description-selection-nav'>
+							<ul class='description-selection-list'>
+								<li class='description-selection'>
+									<span class='description-selection-title selected' onclick='showSection(this, ".description-section")'>Description</span>
+								</li>
+								<li class='description-selection'>
+									<span class='description-selection-title' onclick='showSection(this, ".care-section")'>Care</span>
+								</li>
+								<li class='description-selection'>
+									<span class='description-selection-title' onclick='showSection(this, ".origin-section")'>Origin</span>
+								</li>
+							</ul>
+						</nav>
+
+						<section class="description-section selection-section selected">
+							<p class='description-selection-contents'>Hedera helix is an evergreen climbing plant, growing to 20–30 m (66–98 ft) high where suitable surfaces (trees, cliffs, walls) are available, and also growing as groundcover where no vertical surfaces occur. It climbs by means of aerial rootlets with matted pads which cling strongly to the substrate. The ability to climb on surfaces varies with the plants variety and other factors: Hedera helix prefers non-reflective, darker and rough surfaces with near-neutral pH. It generally thrives in a wide range of soil pH with 6.5 being ideal, prefers moist, shady locations and avoids exposure to direct sunlight, the latter promoting drying out in winter.
+							</p>
+						</section>
+						<section class="care-section selection-section">
+							<p class='description-selection-contents'>Ivy is widely cultivated as an ornamental plant. Within its native range, the species is greatly valued for attracting wildlife. The flowers are visited by over 70 species of nectar-feeding insects, and the berries eaten by at least 16 species of birds. The foliage provides dense evergreen shelter, and is also browsed by deer.
+							In Europe, it is frequently planted to cover walls and the Bavarian government recommends growing it on buildings for its ability to cool the interior in summer, while providing insulation in winter, as well as protecting the covered building from soil moisture, temperature fluctuations and direct exposure to heavy weather. Further uses include weed suppression in plantings, beautifying unsightly facades and providing additional green by growing on tree trunks. </p>
+						</section>
+						<section class= "origin-section selection-section">
+							<p class='description-selection-contents'>It ranges from Ireland northeast to southern Scandinavia, south to Portugal, and east to Ukraine and Iran and northern Turkey.</p>
+						</section>
+					</div>
+					
+				</div>
+			</li>
+		</ul>
+			<div id='page-cycle-buttons' class='desktop-only'>
+				<button type='button' id='previousButton' class='invisible' onclick='showPreviousPlant()'>Prev</button>
+				<button type='button' id='nextButton' onclick='showNextPlant()'>Next</button>
+			</div>
+	</section>
+	<section id='contact-section' class='page-body'>
+		<div class='alignment-container'>
+			
+			<h2 class='body-title'>Contact the Page Author</h2>
+			<section class='contact-section-container'>
+				<div>
+					<label>Email Me At: </label>
+					<span>jackelsjoseph@gmail.com</span>
+				</div>
+
+				<div>
+					<label>Check Out My Github At: </label>
+					<span><a href="https://github.com/JosephJackels">https://github.com/JosephJackels</a></span>
+				</div>
+			</section>
+		</div>
+	</section>
+	<section id='about-section' class='page-body'>
+		<h2 class='body-title'>About This Page</h2>
+		<section class='about-section-container'>
+			<section class='message-part'>
+				<h3 class='message-heading'>Why I Made This Page</h3>
+				<article>
+					<h4>Design</h4>
+					<p>I've been learning Web Development and slowing honing my technical skills. I'm feeling fairly confident in the more 'functional' areas of web development, but have noticed that one area I REALLY need more practice in is the design process. The areas I need to get more practice in are:</p>
+					<ul>
+						<li><span>Creating a base web design - what the project will look like before coding begins</span></li>
+						<li><span>Styling and creating functionality that achieves this design</span></li>
+						<li><span>Writing clean, proper, reuseable code to this affect</span></li>
+						<li><span>Using 'Semantic' HTML instead of an endless jungle of nested div tags</span></li>
+						<li><span>Responsive Design</span></li>
+					</ul>
+				</article>
+				<article>
+					<h4>Technical Skills</h4>
+					<p>Along with design, this page was also a way for me to practice my more technical skills. Creating a web page requires me to decide the various goals and requirements for the project, and the best ways to achieve them. Some examples of this process that I gained more experience in by working on this project are:</p>
+					<ul>
+						<li><span>Project Scope and Structure</span><p>Should the page be a hard-coded html/css/javscript page? Should the content be served dynamically from a server?</p></li>
+						<li><span>Language Choices</span><p>After a structure and scope is decided there are choices of what languages, frameworks etc. best achieve that goal, and a balance between complexity, upkeep effort, and effort in writing</p></li>
+					</ul>
+				</article>
+				<article>
+					<h4>Real World Work Environment</h4>
+					<p>This Project was also a way for me to work on skills that are applicable to a 'real world' environment. In this project I attempted to follow a strict design and creation process. I gave myself deadlines and spent a lot of time creating specific, time-based goals for different parts of the project. This gave a rigor and structure to the process, requiring me to analyze my skills and progress to create goals that were both attainable and worthwhile for the end-design that I had in mind. This naturally led me to creating a strong 'Minimum Viable Product' where I met my base requirements and was forced to 'trim the fat' in areas that costed too much time for the value they would add.</p>
+				</article> 
+			</section>
+			<section class='message-part'>
+				<h3>How I Made This Page</h3>
+				<article>
+					<h4>Initial Design</h4>
+					<p>I began the design process by coming up with a general list of what the page was for:</p>
+					<ul>
+						<li><span>Display the Various Plants in My Home</span></li>
+						<li><span>Inform the user of various information regarding each plant</span></li>
+					</ul>
+					<p>I then began crafting mockups using a program called <a href="https://pencil.evolus.vn/">Pencil</a>. The initial mockups were just structure/organization based. To create a general structure that displayed all the information I wanted to share. I created one version for a landscape/desktop version of how the page should look and one version for a portrait/mobile version. I then added color and a placeholder image to the mockup, and began creating a background for each size-version of the site. The background images were created using images found online (all sources can be found in the footer of this page) and edited using <a href="https://www.gimp.org/">GIMP</a> - the GNU Image Manipulation Program.
+					</p>
+				</article>
+				<article>
+					<h4>Technical Process</h4>
+					<p>After I had a design to work from, it became time to start the process of creating the actual website. I knew that I wanted to create a site that I could easily add new content to. I wanted to continue to gain experience with the skills and languages I had used thus far, while still learning new and better things and making improvements to my usage of them. This led me to three possible ways of creating this project, with pros and cons for each:
+					</p>
+					
+					<table>
+							<thead>
+								<tr>
+									<td>Option</td>
+									<td>Pros</td>
+									<td>Cons</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span>Hardcoded in html/css/js</span></td>
+									<td>
+										<ul>
+											<li><span>All skills I am fairly competent in</span></li>
+											<li><span>Can easily be displayed, shared, and viewed on github pages for free</span></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><span>Updating content and properly organizing main file will be more work</span></li>
+											<li><span>Main file will quickly become very large and cumbersome as content is added</span></li>
+											<li><span>Less power and control over functionality</span></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>Base Files in html/css/js, server used to allow requests for a JSON file</td>
+									<td>
+										<ul>
+											<li><span>Gets around CORS to load 'local' files from server</span></li>
+											<li><span>Allows for content to be loaded from file</span></li>
+											<li><span>Some slick javascript would allow for a dynamic page to be built easily, without much added to original 'easy' version of page</span></li>
+											<li><span>Adding more content to page would be as simple as adding another entry to the JSON file</span></li>
+											<li><span>Still uses simple stack with little extra knowledge required</span></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><span>No longer a static page, not able to be served on github pages</span></li>
+											<li><span>Requires a server</span></li>
+											<li><span>Server only neccessary for one task - overkill?</span></li>
+											<li><span>Adding new content is easier, but still a little more complicated than it could be</span></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>Building a full CRUD App - html/css/js + mySQL, PHP</td>
+									<td>
+										<ul>
+											<li><span>Most 'real world' version of the site</span></li>
+											<li><span>Once built, easiest/best option for adding, removing, updating content</span></li>
+											<li><span>Excellent showcase of skills</span></li>
+											<li><span>Dynamic content/page creation</span></li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li><span>Highest work/time/effort to create initial product</span></li>
+											<li><span>Higher complexity - requires much more error checking, form handling, input validation etc.</span></li>
+											<li><span>Requires extra design/planning - creating database schema, handling user authentication for database writing access etc.</span></li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+					</table>
+					
+					<p>Ultimately I decided to create my MVP using the first option of a simple html/css/javascript page, while writing it in such a way that I would eventually be able to easily update it to it's final version of a CRUD app. This would allow me to quickly prototype and create the design/setup of the page, making any neccessary changes or updates before the final version is created and intertwined with the database. It was my hope that this would help to seperate the design process and the implementation process, ultimately improving and expiditing both sides of development.	
+					</p>
+					<p>With this course chosen, my steps for creating the project were:</p>
+					<ul>
+						<li><span>Use the mockup design to implement the initial structure and style of the page</span></li>
+						<li><span>Add in content/placeholder content as needed. In this case the page only supported two hardcoded plants to switch between</span></li>
+						<li><span>Create a 'mobile first' page by initially styling everything as needed for the mobile version</span></li>
+						<li><span>Thouroughly test the mobile version layout</span></li>
+						<li><span>Add media queries to style page appropriately for the desktop version</span></li>
+						<li><span>Thoroughly test the desktop version layout</span></li>
+						<li><span>Analyze results and come up with any more steps to realize before embarking on 'full' (CRUD) version of page</span></li>
+					</ul>
+				</article>
+			</section>
+			<section class='message-part'>
+				<h3>What's Next?</h3>
+				<article>
+					<h4>Continuing With This Project</h4>
+
+					<p>This project is not yet complete. At the time of writing the initial version of the page is just being wrapped up. Progress on the CRUD version will commence shortly, with more notes and review to come! Lots of content will need to be created and gathered, with the end goal of a page that can dynamically display all the different plants in my home, and a streamlined set of tools to create, read, update, and delete information.</p>
+				</article>
+
+				<article>
+					<h4>Future Projects</h4>
+
+					<p>The main education goals of this project were to allow me to improve upon my design skills, my development process, and to gain general experience. The knowledge, skills, and tools that I learn and create through this project will improve the quality of my future projects, my ability to manage development time, and my overall web design and development process. Be sure to check out my future projects on my <a href="https://github.com/JosephJackels">Github</a>, and check back again for the updated version of this page!</p>
+				</article>
+			</section>
+		</section>
+	</section>
+	<script type="text/javascript">
+		function showSection(tab, sectionId){
+			document.querySelector('.plant-container.active .description-selection-title.selected').classList.remove('selected');
+			document.querySelector('.plant-container.active .selection-section.selected').classList.remove('selected');
+
+			tab.classList.add('selected');
+			document.querySelector('.plant-container.active ' + sectionId).classList.add('selected');
+		}
+		function mainNavClick(tab){
+			switch(tab.id){
+				case 'plants-navbar-link':
+					showBody(tab, 'plants-section');
+					break;
+				case 'contact-navbar-link':
+					showBody(tab, 'contact-section');
+					break;
+				case 'about-navbar-link':
+					showBody(tab, 'about-section');
+					break;
+				default:
+					break;
+			}
+			toggleShow(document.getElementById('page-navbar'));
+		}
+		function showBody(tab, bodyId){
+			document.querySelector('.page-body.selected').classList.remove('selected');
+			document.querySelector('.navbar-link.selected').classList.remove('selected');
+
+			tab.classList.add('selected');
+			document.getElementById(bodyId).classList.add('selected');
+		}
+
+		function toggleShow(element){
+			if(element.classList.contains('mobile-invisible')){
+				element.classList.remove('mobile-invisible');
+			} else {
+				element.classList.add('mobile-invisible');
+			}
+		}
+
+		function showNextPlant(){
+			var current = document.querySelector('#plant-list > li.active');
+			var next = current.nextElementSibling;
+
+			if(next != null){
+				current.classList.remove('active');
+				next.classList.add('active');
+			}
+			checkButtons();
+		}
+		function showPreviousPlant(){
+			var current = document.querySelector('#plant-list > li.active');
+			var prev = current.previousElementSibling;
+
+			if(prev != null){
+				current.classList.remove('active');
+				prev.classList.add('active');
+			}
+			checkButtons();
+		}
+		function checkButtons(){
+			var current = document.querySelector('#plant-list > li.active');
+			var prevBtn = document.getElementById('previousButton');
+			var nextBtn = document.getElementById('nextButton');
+			
+			if(current.previousElementSibling == null){
+				if(!prevBtn.classList.contains('invisible')){
+					prevBtn.classList.add('invisible');
+				}
+			}else{
+				if(prevBtn.classList.contains('invisible')){
+					prevBtn.classList.remove('invisible');
+				}
+			}
+
+			if(current.nextElementSibling == null){
+				if(!nextBtn.classList.contains('invisible')){
+					nextBtn.classList.add('invisible');
+				}
+			}else{
+				if(nextBtn.classList.contains('invisible')){
+					nextBtn.classList.remove('invisible');
+				}
+			}
+		}
+	</script>
+</body>
