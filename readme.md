@@ -1,5 +1,7 @@
 # Plant Page - the Static Version
 
+[GitHub Pages](https://josephjackels.github.io/Plant-Page-Static/) for this web page
+
 ## About
 
 I created this app to practice my web development skills, with my focus for this project being to improve my design skills, gain more experience with a rigorous, time-based development process, and to practice making a solid 'Minimum Viable Product' as a precursor to making a more fully fledged CRUD web application.
