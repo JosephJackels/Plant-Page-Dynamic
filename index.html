@@ -8,7 +8,7 @@
 <body>
 	<header id='page-header'>
 		<h1 id='page-title'>Plants in My House</h1>
-		<button id='show-navbar' class='mobile-only' type='button' onclick='toggleShow(document.getElementById("page-navbar"))'>HB</button>
+		<button id='show-navbar' class='mobile-only hb-icon' type='button' onclick='toggleShowMainNavbar(this)'>&#9776</button>
 		
 		<nav id='page-navbar' class='mobile-invisible'>
 			<ul id='navbar-links'>
@@ -283,7 +283,7 @@
 				default:
 					break;
 			}
-			toggleShow(document.getElementById('page-navbar'));
+			toggleShowMainNavbar(document.getElementById('show-navbar'));
 		}
 		function showBody(tab, bodyId){
 			document.querySelector('.page-body.selected').classList.remove('selected');
@@ -293,11 +293,21 @@
 			document.getElementById(bodyId).classList.add('selected');
 		}
 
-		function toggleShow(element){
-			if(element.classList.contains('mobile-invisible')){
-				element.classList.remove('mobile-invisible');
+		function toggleShowMainNavbar(button){
+			var nav = document.getElementById('page-navbar');
+
+			if(nav.classList.contains('mobile-invisible')){
+				nav.classList.remove('mobile-invisible');
 			} else {
-				element.classList.add('mobile-invisible');
+				nav.classList.add('mobile-invisible');
+			}
+
+			if(button.classList.contains('hb-icon') && button.style.display != 'none'){
+				button.classList.remove('hb-icon');
+				button.innerHTML = '&times';
+			} else if(button.style.display != 'none'){
+				button.classList.add('hb-icon');
+				button.innerHTML = '&#9776';
 			}
 		}
 
