@@ -1,4 +1,4 @@
-# Plant Page - the Static Version
+# Plant Page - the Dynamic Version
 
 [GitHub Pages](https://josephjackels.github.io/Plant-Page-Static/) for this web page
 
